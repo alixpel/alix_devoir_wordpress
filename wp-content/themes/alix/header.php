@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
   <script src="./assets/js/main.js" type="text/javascript"></script>
+  <?php wp_head(); ?>
 </head>
 <body>
   <header class="site-header">

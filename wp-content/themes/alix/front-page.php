@@ -1,3 +1,4 @@
+<?php get_header(); ?>
   <section class="page-header front-page-header">
     <h1 class="page-title">Bientôt en concert</h1>
     <a href="#">
@@ -70,3 +71,4 @@
       </blockquote>
     </section>
   </main>
+<?php get_footer(); ?>
