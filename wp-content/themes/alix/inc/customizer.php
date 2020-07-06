@@ -288,7 +288,77 @@ function alix_customize_register($wp_customize) {
     )
   );
 
+  $wp_customize->add_section(
+    'fp_quote',
+    array(
+      'title'       => 'Citation',
+      'description' => 'Réglages pour la citation de la page d\'accueil principale',
+      'panel'       => 'front_page'
+    )
+  );
 
+  $wp_customize->add_setting(
+    'fp_quote_text',
+    array(
+      'default' => 'Ceci est une belle citation lol',
+      'type'    => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'fp_quote_text',
+    array(
+      'label'       => 'Citation',
+      'description' => 'Texte de la citation',
+      'section'     => 'fp_quote',
+      'setting'     => 'fp_quote_text',
+      'type'        => 'textarea'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'fp_quote_source',
+    array(
+      'default' => 'Rien ne sert de courir, il faut partir à temps.',
+      'type'    => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'fp_quote_source',
+    array(
+      'label'       => 'Source',
+      'description' => 'Nom de l\'auteur de la citation',
+      'section'     => 'fp_quote',
+      'setting'     => 'fp_quote_source',
+      'type'        => 'textarea'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'fp_quote_background',
+    array(
+      'default' => 'custom-quote',
+      'type'    => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'fp_quote_background',
+    array(
+      'label'       => 'Couleur',
+      'description' => 'Couleur de fond du bloc de citation',
+      'section'     => 'fp_quote',
+      'setting'     => 'fp_quote_background',
+      'type'        => 'select',
+      'choices'     => array(
+        'custom-quote'       => 'Par défaut',
+        'custom-quote-style-1'   => 'Rouge',
+        'custom-quote-style-2' => 'Vert',
+        'custom-quote-style-3'  => 'Bleu',
+      )
+    )
+  );
 
 
 

@@ -46,16 +46,15 @@
         </p>
       </div>
     </section>
-    <section class="custom-section">
+    <section class="custom-section <?php echo get_theme_mod('fp_quote_background'); ?>">
       <blockquote class="star-quote">
-        <p class="quote-content">
-          Ce qui se conçoit bien s'énonce clairement et les mots pour le dire
-          arrivent aisément.
-        </p>
-        <cite class="quote-footer">
-          Boileau
-        </cite>
-      </blockquote>
+      <p class="quote-content">
+        <?php echo get_theme_mod('fp_quote_text'); ?>
+      </p>
+      <cite class="quote-footer">
+        <?php echo get_theme_mod('fp_quote_source'); ?>
+      </cite>
+    </blockquote>
     </section>
   </main>
 <?php get_footer(); ?>
