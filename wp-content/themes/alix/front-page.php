@@ -1,35 +1,22 @@
 <?php get_header(); ?>
-  <section class="page-header front-page-header">
-    <h1 class="page-title">Bientôt en concert</h1>
-    <a href="#">
-      <button type="button" class="call-to-action">
-        Réserver mon billet
+  <section class="page-header front-page-header  <?php if(get_theme_mod('fp_container_boxy')) : echo 'boxy-header'; endif; ?>" style="background-image: url('<?php echo get_theme_mod('fp_container_image'); ?>');">
+    <h1 class="page-title" style="font-size: <?php echo get_theme_mod('fp_texts_title_size'); ?>px;"><?php echo get_theme_mod('fp_texts_title'); ?></h1>
+    <a href="<?php echo get_theme_mod('fp_button_url') ; ?>">
+      <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style'); ?>">
+        <?php echo get_theme_mod('fp_button_text'); ?>
       </button>
   </a>
   </section>
   <main class="container front-content">
     <section class="custom-presentation">
-      <img src="./assets/images/yannis-papanastasopoulos-unsplash.jpg" alt="">
+      <img src="./assets/images/yannis-papanastasopoulos-unsplash.jpg" alt=""><!-- *** A RENDRE CUSTOMIZABLE *** -->
       <div class="custom-presentation-infos">
-        <h2 class="custom-title">Un super groupe de musique</h2>
+        <h2 class="custom-title" style="font-size: <?php echo get_theme_mod('fp_texts_title_h2_size'); ?>px;"><?php echo get_theme_mod('fp_texts_title_h2'); ?></h2>
         <p class="custom-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing,
-          sed do eiusmod tempor incididunt.
-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo.
-
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur.
+          <?php echo get_theme_mod('fp_text_custom') ?>
         </p>
         <a href="page.html">
-          <button type="button" class="call-to-action">En savoir plus</button>
+          <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>"><?php echo get_theme_mod('fp_button_text_2'); ?></button>
         </a>
       </div>
     </section>
