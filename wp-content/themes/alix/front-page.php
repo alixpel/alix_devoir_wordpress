@@ -2,10 +2,10 @@
   <section class="page-header front-page-header  <?php if(get_theme_mod('fp_container_boxy')) : echo 'boxy-header'; endif; ?>" style="background-image: url('<?php echo get_theme_mod('fp_container_image'); ?>');">
     <h1 class="page-title" style="font-size: <?php echo get_theme_mod('fp_texts_title'); ?>px;"><?php echo get_theme_mod('fp_texts_title'); ?></h1>
     <a href="<?php echo get_theme_mod('fp_button_url') ; ?>">
-      <button type="button" class="call-to-action">
-        <?php echo get_theme_mod('fp_button_text'); ?>
+      <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_1'); ?>">
+        <?php echo get_theme_mod('fp_button_text_1'); ?>
       </button>
-  </a>
+    </a>
   </section>
   <main class="container front-content">
     <section class="custom-presentation">
@@ -16,7 +16,9 @@
           <?php echo get_theme_mod('fp_text_custom') ?>
         </p>
         <a href="page.html">
-          <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>"><?php echo get_theme_mod('fp_button_text_2'); ?></button>
+          <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>">
+            <?php echo get_theme_mod('fp_button_text_2'); ?>
+          </button>
         </a>
       </div>
     </section>
