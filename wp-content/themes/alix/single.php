@@ -1,14 +1,15 @@
 <?php get_header(); ?>
   <main class="container site-content">
-    <?php if(have_posts()) : ?>
-      <?php while(have_posts()) : the_post(); ?>
+    <?php /*if(have_posts()) : ?>
+      <?php while(have_posts()) :
+      the_post();*/ ?>
       <article class="entry single">
         <header class="entry-header">
           <section class="entry-metadata">
             <section class="entry-data">
               <h4 class="author">
                 <a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>">
-                <?php the_author(); ?></a>
+                <?php the_author();  ?></a>
               </h4>
               <h6 class="publish-date"><?php the_time('d M Y'); ?></h6>
               <?php
@@ -50,7 +51,7 @@
           <section class="author-card">
             <section class="author-thumbnail">
               <?php echo get_avatar(); ?>
-              <!-- <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture"> -->
+             <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture">
             </section>
             <section class="author-metadata">
               <h3 class="author-meta-name"><?php get_the_author_meta('display_name'); ?></h3>
