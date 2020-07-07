@@ -6,8 +6,10 @@
         <header class="entry-header">
           <section class="entry-metadata">
             <section class="entry-data">
-              <h4 class="author"><a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>">
-                <?php the_author(); ?></a></h4>
+              <h4 class="author">
+                <a href="<?php get_author_posts_url(get_the_author_meta('ID')); ?>">
+                <?php the_author(); ?></a>
+              </h4>
               <h6 class="publish-date"><?php the_time('d M Y'); ?></h6>
               <?php
               $categories = get_the_category();
@@ -22,10 +24,14 @@
               }
               echo trim($output, $separator);
               ?>
-              <h4 class="comments-number"><i class="fas fa-comment"></i><?php comments_number('Aucun commentaire', '1 commentaire',
-             '% commentaires'); ?></h4>
+              <h4 class="comments-number">
+                <i class="fas fa-comment"></i><?php comments_number('Aucun commentaire', '1 commentaire',
+             '% commentaires'); ?>
+              </h4>
             </section>
-            <h2 class="entry-title"><?php the_title(); ?></h2>
+            <h2 class="entry-title">
+              <?php the_title(); ?>
+            </h2>
           </section>
           <?php
           if(has_post_thumbnail()) :
@@ -43,10 +49,11 @@
         <footer class="entry-footer">
           <section class="author-card">
             <section class="author-thumbnail">
-              <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture">
+              <?php echo get_avatar(); ?>
+              <!-- <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture"> -->
             </section>
             <section class="author-metadata">
-              <h3 class="author-meta-name"><?php get_the_author_meta('get_the_author_meta'); ?></h3>
+              <h3 class="author-meta-name"><?php get_the_author_meta('display_name'); ?></h3>
               <p class="author-meta-description">
                 <?php get_the_author_meta('description'); ?>
               </p>
