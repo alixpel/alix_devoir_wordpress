@@ -6,10 +6,12 @@ function alix_setup() {
     array(
       'primary' => 'Menu Principal',
       'secondary' => 'Menu Secondaire',
+      'footer'  => 'Menu de pied de page',
       'social'  => 'Menu réseaux sociaux'
     )
   );
   add_theme_support('custom-logo');
+  add_theme_support('post_thumbnails');
 
 }
 
