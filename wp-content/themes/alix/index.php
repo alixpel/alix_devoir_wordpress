@@ -7,42 +7,54 @@
           class="featured-image">
           <section class="entry-metadata">
             <section class="entry-data">
-              <h6 class="publish-date">29 juin 2020</h6>
-              <h5 class="entry-category"><a href="#">Actualité</a></h5>
+              <h6 class="publish-date"><?php the_time('F j, Y'); ?></h6>
+              <!-- Catégorie -->
+              <?php
+              $categories = get_the_category();
+              $separator = " ";
+              $output = '';
+              if($categories) {
+                forEach($categories as $category) {
+                  $output .= '<h5 class="entry-category"><a href="'.get_category_link($category
+                  ->term_id).'">'.$category->cat_name .'</a></h5>' . $separator;
+                }
+              }
+              echo trim($output, $separator);
+              ?>
+              <!-- Fin catégorie -->
               <h4 class="comments-number"><i class="fas fa-comment"></i> 3</h4>
             </section>
             <h2 class="entry-title">
-              <a href="single.html">Vos meilleurs moments en concert</a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
           </section>
         </header>
         <section class="entry-content">
-          <p>
-            Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deseru mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-            do eiusmod tempor incididunt…
-          </p>
+          <?php the_excerpt(); ?>
         </section>
         <footer class="entry-footer">
           <div class="read-more">
-            <a href="single.html">Lire la suite</a>
+            <a href="<?php the_permalink(); ?>">Lire la suite</a>
           </div>
         </footer>
       </article>
       <nav class="navigation pagination">
-        <ul>
-          <li><a href="#"><i class="fas fa-arrow-left"></i> Précédent</a></li>
-          <li><a href="#">Suivant <i class="fas fa-arrow-right"></i></a></li>
-        </ul>
+        <?php
+        the_posts_pagination(
+          array(
+            'prev_text'          => '<i class="fas fa-arrow-left"></i> Précédent',
+            'next_text'          => 'Suivant <i class="fas fa-arrow-right"></i>'
+          )
+        );
+        ?>
       </nav>
     </section>
     <aside class="sidebar">
-      <div class="widget">
+      <!-- <div class="widget">
         <h3 class="widget-title">Zone de widgets</h3>
         <p>Ajout dynamique des titres et contenus des widgets.</p>
-      </div>
+      </div> -->
+      <?php get_sidebar(); ?>
     </aside>
-    <?php get_sidebar(); ?>
   </main>
 <?php get_footer(); ?>

@@ -26,7 +26,7 @@
       wp_nav_menu(
         array(
           'theme_location'  => 'primary',
-          'container' => false // évite que WP engloabe le <ul> d'une balise <div>
+          'container' => false
         )
       );
       ?>
@@ -62,7 +62,7 @@
     </nav>
     <section class="search-popup">
       <form class="search-form" action="index.html" method="post">
-        <input type="text" name="search" value="" placeholder="Tapez quelque chose...">
+        <input type="text" name="search" value="" placeholder="Tapez quelque chose ...">
         <input type="submit" name="submit" value="Rechercher">
       </form>
     </section>
