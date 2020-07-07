@@ -1,8 +1,7 @@
 <?php get_header(); ?>
   <main class="container site-content">
-    <?php /*if(have_posts()) : ?>
-      <?php while(have_posts()) :
-      the_post();*/ ?>
+    <?php if(have_posts()) : ?>
+      <?php while(have_posts()) : the_post(); ?>
       <article class="entry single">
         <header class="entry-header">
           <section class="entry-metadata">
@@ -54,9 +53,10 @@
              <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture">
             </section>
             <section class="author-metadata">
-              <h3 class="author-meta-name"><?php get_the_author_meta('display_name'); ?></h3>
+              <h3 class="author-meta-name"><?php get_the_author_meta('display_name'); ?>nom de l'auteur</h3>
               <p class="author-meta-description">
                 <?php get_the_author_meta('description'); ?>
+                description de l'auteur
               </p>
             </section>
           </section>
@@ -75,6 +75,8 @@
           </section>
         </footer>
       </article>
+      <?php endwhile; ?>
+      <?php endif; ?>
       <?php get_sidebar(); ?>
   </main>
 <?php get_footer(); ?>

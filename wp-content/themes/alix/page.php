@@ -12,7 +12,6 @@
       <article class="entry page">
         <section class="entry-content">
           <?php the_content(); ?>
-
           <section class="comments">
             <h3 class="comments-title">Laisser un message</h3>
             <form class="comment-form" action="index.html" method="post">
