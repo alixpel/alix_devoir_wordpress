@@ -16,7 +16,7 @@ function alix_setup() {
 add_action('after_setup_theme', 'alix_setup');
 
 
-function descodeuses_init_widgets() {
+function alix_init_widgets() {
   // TODO COURS - Enregistrer une zone de widget N°1
   register_sidebar(
     array(

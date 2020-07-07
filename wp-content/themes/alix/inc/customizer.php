@@ -2,7 +2,44 @@
 
 function alix_customize_register($wp_customize) {
 
+  // banner
+
+  $wp_customize->add_section(
+    'banner',
+    array(
+      'title' => 'Bannière',
+      'description'   => 'Description de la section'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'banner_image',
+    array(
+      'default' => get_template_directory() . '/assets/images/logo-rock-band.png',
+      'type'  => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    new WP_Customize_Image_control(
+      $wp_customize,
+      'banner_image',
+      array(
+        'label'   => 'Image de fond',
+        'section' => 'banner',
+        'settings'  => 'banner_image'
+      )
+    )
+  );
+
 // front-page.php
+
+  $wp_customize->add_panel(
+    'front_page',
+    array(
+      'title'         => 'Page d\'accueil principale'
+    )
+  );
 
   $wp_customize->add_section(
     'fp_texts_title',
@@ -221,7 +258,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_button_2',
     array(
-      'title' => 'Bouton',
+      'title' => 'Bouton 2',
       'description' => 'Bouton en \"savoir plus\"',
       'panel' => 'front_page'
     )
@@ -359,6 +396,27 @@ function alix_customize_register($wp_customize) {
       )
     )
   );
+
+  // footer.php
+
+  // $wp_customize->add_section(
+  //   'footer_copyright_text',
+  //   array(
+  //     'default' => 'Nom',
+  //     'type'  => 'theme_mod'
+  //   )
+  // );
+  //
+  // $wp_customize->add_control(
+  //   'footer_copyright_text',
+  //   array(
+  //     'label'          => 'Nom copyright',
+  //     'description'    => 'Copyright',
+  //     'section'        => 'footer_texts',
+  //     'setting'        => 'footer_copyright_text',
+  //     'type'           => 'text'
+  //   )
+  // );
 
 
 

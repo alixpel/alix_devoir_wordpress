@@ -38,7 +38,7 @@
   </section>
   <section class="footer-infos container">
     <div class="copyright">
-      <p>© 2020 Descodeuses. Tous droits réservés.</p><!-- ********** A COMPLETER ********* -->
+      <p>© <?php the_time('Y'); get_bloginfo('name'); ?>. Tous droits réservés.</p>
     </div>
     <div class="social-medias">
       <nav class="navigation navigation-socials navigation-bottom" id="navigation-socials">
