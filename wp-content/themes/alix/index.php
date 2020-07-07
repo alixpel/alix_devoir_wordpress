@@ -1,10 +1,15 @@
 <?php get_header(); ?>
   <main class="container site-content">
     <section class="main-content">
+      <?php if(have_posts()) : ?>
+      <?php while(have_posts()) : the_post(); ?>
       <article class="entry post">
         <header class="entry-header">
-          <img src="./assets/images/joey-thompson-unsplash.jpg" alt="Foule"
-          class="featured-image">
+          <?php if(has_post_thumbnail()) : ?>
+          <?php the_post_thumbnail('full', ['class' => 'featured-image', 'title' => 'Vignette']); ?>
+          <?php endif; ?>
+          <!-- <img src="./assets/images/joey-thompson-unsplash.jpg" alt="Foule"
+          class="featured-image"> -->
           <section class="entry-metadata">
             <section class="entry-data">
               <h6 class="publish-date"><?php the_time('F j, Y'); ?></h6>
@@ -38,6 +43,8 @@
           </div>
         </footer>
       </article>
+      <?php endwhile; ?>
+      <?php endif; ?>
       <nav class="navigation pagination">
         <?php
         the_posts_pagination(
