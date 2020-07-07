@@ -961,6 +961,11 @@ body {
 	flex-wrap: wrap;
 }
 
+/* ajout alix pelletier */
+.custom-blocks {
+	flex-direction: column !important;
+}
+
 .custom-presentation-infos {
 	margin-left: 2rem;
 }

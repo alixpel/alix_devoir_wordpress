@@ -397,6 +397,7 @@ function alix_customize_register($wp_customize) {
     )
   );
 
+  // quote
   $wp_customize->add_section(
     'fp_quote',
     array(
@@ -468,6 +469,231 @@ function alix_customize_register($wp_customize) {
       )
     )
   );
+
+  // sections custom
+
+  // custom 1
+
+  $wp_customize->add_section(
+    'custom-zone-1',
+    array(
+      'title'       => 'Contenu custom 1',
+      'description' => 'Contenu de la zone custom 1',
+      'panel'       => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-icon-1',
+    array(
+      'default' => 'fas fa-icons fa-3x',
+      'type'  => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-icon-1',
+    array(
+      'label'       => 'Icône',
+      'description' => 'Icône de la zone custom 1',
+      'section'     => 'custom-zone-1',
+      'setting'     => 'custom-icon-1',
+      'type'        => 'select',
+      'choices'     => array(
+        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
+        'fas fa-music fa-3x' => 'musique',
+        'fas fa-ticket-alt fa-3x'  => 'ticket'
+      )
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-title-1',
+    array(
+      'default' => 'Titre zone 1',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-title-1',
+    array(
+      'label'       => 'Titre custom 1',
+      'description' => 'Titre de la zone custom 1',
+      'section' => 'custom-zone-1',
+      'setting' => 'custom-title-1',
+      'type' => 'text'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-text-1',
+    array(
+      'default'       => 'Texte zone 1',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-text-1',
+    array(
+      'label'       => 'Texte custom 1',
+      'description' => 'Texte de la zone custom 1',
+      'section' => 'custom-zone-1',
+      'setting' => 'custom-text-1',
+      'type' => 'textarea'
+    )
+  );
+
+  // custom 2
+
+  $wp_customize->add_section(
+    'custom-zone-2',
+    array(
+      'title'       => 'Contenu custom 2',
+      'description' => 'Contenu de la zone custom 2',
+      'panel'       => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-icon-2',
+    array(
+      'default' => 'fas fa-icons fa-3x',
+      'type'  => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-icon-2',
+    array(
+      'label'       => 'Icône',
+      'description' => 'Icône de la zone custom 2',
+      'section'     => 'custom-zone-2',
+      'setting'     => 'custom-icon-2',
+      'type'        => 'select',
+      'choices'     => array(
+        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
+        'fas fa-music fa-3x' => 'musique',
+        'fas fa-ticket-alt fa-3x'  => 'ticket'
+      )
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-title-2',
+    array(
+      'default' => 'Titre zone 2',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-title-2',
+    array(
+      'label'       => 'Titre custom 2',
+      'description' => 'Titre de la zone custom 2',
+      'section' => 'custom-zone-2',
+      'setting' => 'custom-title-2',
+      'type' => 'text'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-text-2',
+    array(
+      'default'       => 'Texte zone 2',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-text-2',
+    array(
+      'label'       => 'Texte custom 2',
+      'description' => 'Texte de la zone custom 2',
+      'section' => 'custom-zone-2',
+      'setting' => 'custom-text-2',
+      'type' => 'textarea'
+    )
+  );
+
+  // cutsom 3
+
+  $wp_customize->add_section(
+    'custom-zone-3',
+    array(
+      'title'       => 'Contenu custom 3',
+      'description' => 'Contenu de la zone custom 3',
+      'panel'       => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-icon-3',
+    array(
+      'default' => 'fas fa-icons fa-3x',
+      'type'  => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-icon-3',
+    array(
+      'label'       => 'Icône',
+      'description' => 'Icône de la zone custom 3',
+      'section'     => 'custom-zone-3',
+      'setting'     => 'custom-icon-3',
+      'type'        => 'select',
+      'choices'     => array(
+        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
+        'fas fa-music fa-3x' => 'musique',
+        'fas fa-ticket-alt fa-3x'  => 'ticket'
+      )
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-title-3',
+    array(
+      'default' => 'Titre zone 3',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-title-3',
+    array(
+      'label'       => 'Titre custom 3',
+      'description' => 'Titre de la zone custom 3',
+      'section' => 'custom-zone-3',
+      'setting' => 'custom-title-3',
+      'type' => 'text'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'custom-text-3',
+    array(
+      'default'       => 'Texte zone 3',
+      'type' => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'custom-text-3',
+    array(
+      'label'       => 'Texte custom 3',
+      'description' => 'Texte de la zone custom 3',
+      'section' => 'custom-zone-3',
+      'setting' => 'custom-text-3',
+      'type' => 'textarea'
+    )
+  );
+
 
   // footer.php
 
