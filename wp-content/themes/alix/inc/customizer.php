@@ -694,6 +694,35 @@ function alix_customize_register($wp_customize) {
     )
   );
 
+  // zone de widgets latérale :
+  $wp_customize->add_section(
+    'widget-sidebar',
+    array(
+      'title'       => 'Zone de widgets latérale',
+      'description' => 'Masquer la zone de widgets latérale',
+      'panel'       => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'widgets-sidebar',
+    array(
+    'default'     => false,
+    'type'        => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'widgets-sidebar',
+    array(
+      'label'       => 'Zone de widgets latérale',
+      'description' => 'Masquer la zone de widgets latérale',
+      'section'     => 'widget-sidebar',
+      'setting'     => 'widgets-sidebar',
+      'type'        => 'checkbox'
+    )
+  );
+
 
   // footer.php
 

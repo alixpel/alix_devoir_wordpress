@@ -48,8 +48,8 @@
         <footer class="entry-footer">
           <section class="author-card">
             <section class="author-thumbnail">
-              <?php //echo get_avatar('force_default'); ?>
-              <?php echo get_avatar('force_display'); ?>
+              <?php echo get_avatar( get_the_author_meta( 'ID' ), 96, 'retro', 'Photo de l\'auteur', ['class' => 'author-picture'] ); ?>
+              <?php //echo get_avatar('force_display'); ?>
             </section>
             <section class="author-metadata">
               <h3 class="author-meta-name"><?php the_author(); ?></h3>
