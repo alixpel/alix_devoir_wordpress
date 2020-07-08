@@ -88,5 +88,8 @@ add_action('widgets_init', 'alix_init_widgets');
 
 require get_template_directory() . '/inc/customizer.php';
 
+// traduction
+load_theme_textdomain( 'alix', '/languages' );
+
 
  ?>

@@ -8,8 +8,6 @@
           <?php if(has_post_thumbnail()) : ?>
           <?php the_post_thumbnail('full', ['class' => 'featured-image', 'title' => 'Vignette']); ?>
           <?php endif; ?>
-          <!-- <img src="./assets/images/joey-thompson-unsplash.jpg" alt="Foule"
-          class="featured-image"> -->
           <section class="entry-metadata">
             <section class="entry-data">
               <h6 class="publish-date"><?php the_time('F j, Y'); ?></h6>

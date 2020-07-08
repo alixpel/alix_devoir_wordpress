@@ -13,7 +13,7 @@
       <div class="custom-presentation-infos">
         <h2 class="custom-title" style="font-size: <?php echo get_theme_mod('fp_texts_title_h2_size'); ?>px;"><?php echo get_theme_mod('fp_texts_title_h2'); ?></h2>
         <p class="custom-content">
-          <?php echo get_theme_mod('fp_text_custom') ?>
+          <?php echo get_theme_mod('fp_text_custom'); ?>
         </p>
         <a href="page.html">
           <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>">
