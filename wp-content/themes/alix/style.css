@@ -400,6 +400,10 @@ h3 {
   line-height: 2rem;
 }
 
+.error-page {
+	color: #0cd4c5;
+}
+
 h4, .navigation-top {
 	font-size: .86rem;
 	font-weight: 700;

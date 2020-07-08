@@ -705,6 +705,14 @@ function alix_customize_register($wp_customize) {
   //   )
   // );
   //
+  // $wp_customize->add_setting(
+  //   'footer_copyright_text',
+  //   array(
+  //     'default' => 'nom copyright',
+  //     'type' => 'theme_mod'
+  //   )
+  // );
+  //
   // $wp_customize->add_control(
   //   'footer_copyright_text',
   //   array(
