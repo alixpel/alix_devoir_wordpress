@@ -49,13 +49,12 @@
         <footer class="entry-footer">
           <section class="author-card">
             <section class="author-thumbnail">
-              <?php echo get_avatar(); ?>
-             <img src="./assets/images/logo-rock-band.png" alt="Photo de l'auteur" class="author-picture">
+             <img src="<?php echo get_author_posts_url(get_avatar('ID')); ?>" alt="Photo de l'auteur" class="author-picture">
             </section>
             <section class="author-metadata">
-              <h3 class="author-meta-name"><?php get_the_author_meta('display_name'); ?>nom de l'auteur</h3>
+              <h3 class="author-meta-name"><?php the_author(); ?>nom de l'auteur</h3>
               <p class="author-meta-description">
-                <?php get_the_author_meta('description'); ?>
+                <?php the_author_meta('description'); ?>
                 description de l'auteur
               </p>
             </section>
