@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <section class="page-header front-page-header  <?php if(get_theme_mod('fp_container_boxy')) : echo 'boxy-header'; endif; ?>" style="background-image: url('<?php echo get_theme_mod('fp_container_image'); ?>');">
     <h1 class="page-title" style="font-size: <?php echo get_theme_mod('fp_h1_size'); ?>px;"><?php echo _e(get_theme_mod('fp_h1_text')); ?></h1>
-    <a href="<?php echo get_theme_mod('fp_button_url') ; ?>">
+    <a href="<?php echo get_theme_mod('fp_button_url_1') ; ?>">
       <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_1'); ?>">
         <?php echo _e(get_theme_mod('fp_button_text_1')); ?>
       </button>
@@ -15,7 +15,7 @@
         <p class="custom-content">
           <?php echo _e(get_theme_mod('fp_text_custom')); ?>
         </p>
-        <a href="<?php bloginfo('custom_button_url'); ?>">
+        <a href="<?php echo get_theme_mod('fp_button_url_2'); ?>">
           <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>">
             <?php echo _e(get_theme_mod('fp_button_text_2')); ?>
           </button>
