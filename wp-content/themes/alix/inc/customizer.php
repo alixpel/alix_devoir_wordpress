@@ -15,7 +15,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_setting(
     'banner_image',
     array(
-      'default' => get_template_directory() . '/assets/images/logo-rock-band.png',
+      'default' => get_template_directory() . '/assets/images/joey-thompson-unsplash.jpg',
       'type'    => 'theme_mod'
     )
   );
@@ -37,7 +37,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_panel(
     'front_page',
     array(
-      'title'         => 'Page d\'accueil principale'
+      'title' => 'Page d\'accueil principale'
     )
   );
 
@@ -695,13 +695,12 @@ function alix_customize_register($wp_customize) {
   );
 
   // zone de widgets latérale :
-  
+
   $wp_customize->add_section(
     'widget-sidebar',
     array(
       'title'       => 'Zone de widgets latérale',
-      'description' => 'Masquer la zone de widgets latérale',
-      'panel'       => 'front_page'
+      'description' => 'Masquer la zone de widgets latérale'
     )
   );
 

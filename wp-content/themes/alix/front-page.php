@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <section class="page-header front-page-header  <?php if(get_theme_mod('fp_container_boxy')) : echo 'boxy-header'; endif; ?>" style="background-image: url('<?php echo get_theme_mod('fp_container_image'); ?>');">
-    <h1 class="page-title" style="font-size: <?php echo get_theme_mod('fp_texts_title'); ?>px;"><?php echo _e(get_theme_mod('fp_texts_title')); ?></h1>
+    <h1 class="page-title" style="font-size: <?php echo get_theme_mod('fp_texts_title_size'); ?>px;"><?php echo _e(get_theme_mod('fp_texts_title')); ?></h1>
     <a href="<?php echo get_theme_mod('fp_button_url') ; ?>">
       <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_1'); ?>">
         <?php echo _e(get_theme_mod('fp_button_text_1')); ?>
@@ -9,13 +9,13 @@
   </section>
   <main class="container front-content">
     <section class="custom-presentation">
-      <img src="./assets/images/yannis-papanastasopoulos-unsplash.jpg" alt=""><!-- *** A RENDRE CUSTOMIZABLE *** -->
+      <img src="<?php echo get_theme_mod('banner_image'); ?>" alt=""><!-- *** A RENDRE CUSTOMIZABLE *** -->
       <div class="custom-presentation-infos">
         <h2 class="custom-title" style="font-size: <?php echo get_theme_mod('fp_texts_title_h2_size'); ?>px;"><?php echo _e(get_theme_mod('fp_texts_title_h2')); ?></h2>
         <p class="custom-content">
           <?php echo _e(get_theme_mod('fp_text_custom')); ?>
         </p>
-        <a href="page.html">
+        <a href="<?php bloginfo('custom_button_url'); ?>">
           <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>">
             <?php echo _e(get_theme_mod('fp_button_text_2')); ?>
           </button>
