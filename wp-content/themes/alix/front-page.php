@@ -26,30 +26,22 @@
       <div class="custom-block">
         <i class="<?php echo get_theme_mod('custom-icon-1'); ?>"></i>
         <h3 class="custom-title"><?php echo get_theme_mod('custom-title-1'); ?></h3>
-        <p class="custom-content">
-          <?php echo get_theme_mod('custom-text-1'); ?>
-        </p>
+        <p class="custom-content"><?php echo get_theme_mod('custom-text-1'); ?></p>
       </div>
       <div class="custom-block">
         <i class="<?php echo get_theme_mod('custom-icon-2'); ?>"></i>
         <h3 class="custom-title"><?php echo get_theme_mod('custom-title-2'); ?></h3>
-        <p class="custom-content">
-          <?php echo get_theme_mod('custom-text-2'); ?>
-        </p>
+        <p class="custom-content"><?php echo get_theme_mod('custom-text-2'); ?></p>
       </div>
       <div class="custom-block">
         <i class="<?php echo get_theme_mod('custom-icon-3'); ?>"></i>
         <h3 class="custom-title"><?php echo get_theme_mod('custom-title-3'); ?></h3>
-        <p class="custom-content">
-          <?php echo get_theme_mod('custom-text-3'); ?>
-        </p>
+        <p class="custom-content"><?php echo get_theme_mod('custom-text-3'); ?></p>
       </div>
     </section>
     <section class="custom-section <?php echo get_theme_mod('fp_quote_background'); ?>">
       <blockquote class="star-quote">
-      <p class="quote-content">
-        <?php echo get_theme_mod('fp_quote_text'); ?>
-      </p>
+      <p class="quote-content"><?php echo get_theme_mod('fp_quote_text'); ?></p>
       <cite class="quote-footer">
         <?php echo get_theme_mod('fp_quote_source'); ?>
       </cite>

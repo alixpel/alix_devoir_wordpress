@@ -959,15 +959,13 @@ body {
 	margin: 3rem auto;
 }
 
-.custom-blocks,
+.custom-blocks {
+	display: flex;
+}
+
 .custom-presentation {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-/* ajout alix pelletier */
-.custom-blocks {
-	flex-direction: column !important;
 }
 
 .custom-presentation-infos {
