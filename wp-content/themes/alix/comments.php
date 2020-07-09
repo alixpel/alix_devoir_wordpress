@@ -1,6 +1,8 @@
 <section class="comments">
   <h3 class="comments-title">
-    <?php comments_number('Aucun commentaire', '1 commentaire', '% commentaires'); ?> pour "<?php the_title(); ?>"
+    <?php comments_number('Aucun commentaire', '1 commentaire', '% commentaires');
+    _e('pour :');
+     the_title(); ?>"
   </h3>
   <?php
   // affiche la liste des commentaires de l'article

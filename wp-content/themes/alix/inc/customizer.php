@@ -7,7 +7,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'banner',
     array(
-      'title' => 'Bannière',
+      'title'         => 'Bannière',
       'description'   => 'Description de la section'
     )
   );
@@ -16,7 +16,7 @@ function alix_customize_register($wp_customize) {
     'banner_image',
     array(
       'default' => get_template_directory() . '/assets/images/logo-rock-band.png',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -25,8 +25,8 @@ function alix_customize_register($wp_customize) {
       $wp_customize,
       'banner_image',
       array(
-        'label'   => 'Image de fond',
-        'section' => 'banner',
+        'label'     => 'Image de fond',
+        'section'   => 'banner',
         'settings'  => 'banner_image'
       )
     )
@@ -45,7 +45,7 @@ function alix_customize_register($wp_customize) {
     'fp_texts_title',
     array(
       'default' => 'Concert !',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -82,9 +82,9 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_button',
     array(
-      'title' => 'Bouton',
+      'title'       => 'Bouton',
       'description' => 'Bouton pour la réservation de billets',
-      'panel' => 'front_page'
+      'panel'       => 'front_page'
     )
   );
 
@@ -152,7 +152,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_container',
     array(
-      'title' => 'Conteneur',
+      'title'         => 'Conteneur',
       'description'   => 'Réglages du conteneur de la page d\'accueil principale',
       'panel'         => 'front_page'
     )
@@ -171,10 +171,10 @@ function alix_customize_register($wp_customize) {
       $wp_customize,
       'fp_container_image',
       array(
-        'label'   => 'Image de fond',
+        'label'       => 'Image de fond',
         'description' => 'Image de fond du conteneur de la page d\'accueil',
-        'section' => 'fp_container',
-        'setting'  => 'fp_container_image'
+        'section'     => 'fp_container',
+        'setting'     => 'fp_container_image'
       )
     )
   );
@@ -202,7 +202,7 @@ function alix_customize_register($wp_customize) {
     'fp_texts_title_h2',
     array(
       'default' => 'Un super groupe de musique',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -259,9 +259,9 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_button_1',
     array(
-      'title' => 'Bouton 1',
+      'title'       => 'Bouton 1',
       'description' => 'Bouton en \"savoir plus\"',
-      'panel' => 'front_page'
+      'panel'       => 'front_page'
     )
   );
 
@@ -330,9 +330,9 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_section(
     'fp_button_2',
     array(
-      'title' => 'Bouton 2',
+      'title'       => 'Bouton 2',
       'description' => 'Bouton en \"savoir plus\"',
-      'panel' => 'front_page'
+      'panel'       => 'front_page'
     )
   );
 
@@ -462,10 +462,10 @@ function alix_customize_register($wp_customize) {
       'setting'     => 'fp_quote_background',
       'type'        => 'select',
       'choices'     => array(
-        'custom-quote'       => 'Par défaut',
+        'custom-quote'           => 'Par défaut',
         'custom-quote-style-1'   => 'Rouge',
-        'custom-quote-style-2' => 'Vert',
-        'custom-quote-style-3'  => 'Bleu',
+        'custom-quote-style-2'   => 'Vert',
+        'custom-quote-style-3'   => 'Bleu',
       )
     )
   );
@@ -487,7 +487,7 @@ function alix_customize_register($wp_customize) {
     'custom-icon-1',
     array(
       'default' => 'fas fa-icons fa-3x',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -500,10 +500,10 @@ function alix_customize_register($wp_customize) {
       'setting'     => 'custom-icon-1',
       'type'        => 'select',
       'choices'     => array(
-        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-icons fa-3x'          => 'icônes par défaut',
         'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
-        'fas fa-music fa-3x' => 'musique',
-        'fas fa-ticket-alt fa-3x'  => 'ticket'
+        'fas fa-music fa-3x'          => 'musique',
+        'fas fa-ticket-alt fa-3x'     => 'ticket'
       )
     )
   );
@@ -512,7 +512,7 @@ function alix_customize_register($wp_customize) {
     'custom-title-1',
     array(
       'default' => 'Titre zone 1',
-      'type' => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -521,17 +521,17 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Titre custom 1',
       'description' => 'Titre de la zone custom 1',
-      'section' => 'custom-zone-1',
-      'setting' => 'custom-title-1',
-      'type' => 'text'
+      'section'     => 'custom-zone-1',
+      'setting'     => 'custom-title-1',
+      'type'        => 'text'
     )
   );
 
   $wp_customize->add_setting(
     'custom-text-1',
     array(
-      'default'       => 'Texte zone 1',
-      'type' => 'theme_mod'
+      'default' => 'Texte zone 1',
+      'type'    => 'theme_mod'
     )
   );
 
@@ -540,9 +540,9 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Texte custom 1',
       'description' => 'Texte de la zone custom 1',
-      'section' => 'custom-zone-1',
-      'setting' => 'custom-text-1',
-      'type' => 'textarea'
+      'section'     => 'custom-zone-1',
+      'setting'     => 'custom-text-1',
+      'type'        => 'textarea'
     )
   );
 
@@ -561,7 +561,7 @@ function alix_customize_register($wp_customize) {
     'custom-icon-2',
     array(
       'default' => 'fas fa-icons fa-3x',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -574,10 +574,10 @@ function alix_customize_register($wp_customize) {
       'setting'     => 'custom-icon-2',
       'type'        => 'select',
       'choices'     => array(
-        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-icons fa-3x'          => 'icônes par défaut',
         'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
-        'fas fa-music fa-3x' => 'musique',
-        'fas fa-ticket-alt fa-3x'  => 'ticket'
+        'fas fa-music fa-3x'          => 'musique',
+        'fas fa-ticket-alt fa-3x'     => 'ticket'
       )
     )
   );
@@ -586,7 +586,7 @@ function alix_customize_register($wp_customize) {
     'custom-title-2',
     array(
       'default' => 'Titre zone 2',
-      'type' => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -595,17 +595,17 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Titre custom 2',
       'description' => 'Titre de la zone custom 2',
-      'section' => 'custom-zone-2',
-      'setting' => 'custom-title-2',
-      'type' => 'text'
+      'section'     => 'custom-zone-2',
+      'setting'     => 'custom-title-2',
+      'type'        => 'text'
     )
   );
 
   $wp_customize->add_setting(
     'custom-text-2',
     array(
-      'default'       => 'Texte zone 2',
-      'type' => 'theme_mod'
+      'default' => 'Texte zone 2',
+      'type'    => 'theme_mod'
     )
   );
 
@@ -614,9 +614,9 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Texte custom 2',
       'description' => 'Texte de la zone custom 2',
-      'section' => 'custom-zone-2',
-      'setting' => 'custom-text-2',
-      'type' => 'textarea'
+      'section'     => 'custom-zone-2',
+      'setting'     => 'custom-text-2',
+      'type'        => 'textarea'
     )
   );
 
@@ -635,7 +635,7 @@ function alix_customize_register($wp_customize) {
     'custom-icon-3',
     array(
       'default' => 'fas fa-icons fa-3x',
-      'type'  => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -648,10 +648,10 @@ function alix_customize_register($wp_customize) {
       'setting'     => 'custom-icon-3',
       'type'        => 'select',
       'choices'     => array(
-        'fas fa-icons fa-3x' => 'icônes par défaut',
+        'fas fa-icons fa-3x'          => 'icônes par défaut',
         'fas fa-birthday-cake fa-3x'  => 'gâteau d\'anniversaire',
-        'fas fa-music fa-3x' => 'musique',
-        'fas fa-ticket-alt fa-3x'  => 'ticket'
+        'fas fa-music fa-3x'          => 'musique',
+        'fas fa-ticket-alt fa-3x'     => 'ticket'
       )
     )
   );
@@ -660,7 +660,7 @@ function alix_customize_register($wp_customize) {
     'custom-title-3',
     array(
       'default' => 'Titre zone 3',
-      'type' => 'theme_mod'
+      'type'    => 'theme_mod'
     )
   );
 
@@ -669,17 +669,17 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Titre custom 3',
       'description' => 'Titre de la zone custom 3',
-      'section' => 'custom-zone-3',
-      'setting' => 'custom-title-3',
-      'type' => 'text'
+      'section'     => 'custom-zone-3',
+      'setting'     => 'custom-title-3',
+      'type'        => 'text'
     )
   );
 
   $wp_customize->add_setting(
     'custom-text-3',
     array(
-      'default'       => 'Texte zone 3',
-      'type' => 'theme_mod'
+      'default' => 'Texte zone 3',
+      'type'    => 'theme_mod'
     )
   );
 
@@ -688,13 +688,14 @@ function alix_customize_register($wp_customize) {
     array(
       'label'       => 'Texte custom 3',
       'description' => 'Texte de la zone custom 3',
-      'section' => 'custom-zone-3',
-      'setting' => 'custom-text-3',
-      'type' => 'textarea'
+      'section'     => 'custom-zone-3',
+      'setting'     => 'custom-text-3',
+      'type'        => 'textarea'
     )
   );
 
   // zone de widgets latérale :
+  
   $wp_customize->add_section(
     'widget-sidebar',
     array(
@@ -723,82 +724,52 @@ function alix_customize_register($wp_customize) {
     )
   );
 
+  // footer
+  $wp_customize->add_section(
+  'footer',
+    array(
+      'title'         => 'footer',
+      'description'   => 'Personnalisation du bas de page'
+    )
+  );
 
-  // footer.php
+  $wp_customize->add_setting(
+    'copyright_name',
+    array(
+      'default' => 'Nom',
+      'type'    => 'theme_mod'
+    )
+  );
 
-  // $wp_customize->add_section(
-  //   'footer_copyright_text',
-  //   array(
-  //     'default' => 'Nom',
-  //     'type'  => 'theme_mod'
-  //   )
-  // );
-  //
-  // $wp_customize->add_setting(
-  //   'footer_copyright_text',
-  //   array(
-  //     'default' => 'nom copyright',
-  //     'type' => 'theme_mod'
-  //   )
-  // );
-  //
-  // $wp_customize->add_control(
-  //   'footer_copyright_text',
-  //   array(
-  //     'label'          => 'Nom copyright',
-  //     'description'    => 'Copyright',
-  //     'section'        => 'footer_texts',
-  //     'setting'        => 'footer_copyright_text',
-  //     'type'           => 'text'
-  //   )
-  // );
+  $wp_customize->add_control(
+    'copyright_name',
+    array(
+      'label'       => 'Nom copyright',
+      'description' => 'Nom du copyright',
+      'section'     => 'footer',
+      'setting'     => 'copyright_name',
+      'type'        => 'text'
+    )
+  );
 
-  // Section Footer
-      $wp_customize->add_section(
-      'footer',
-        array(
-          'title' => 'footer',
-          'description'   => 'Personnalisation du bas de page'
-        )
-      );
+  $wp_customize->add_setting(
+    'copyright_text',
+    array(
+      'default' => 'Tous droits réservés',
+      'type'    => 'theme_mod'
+    )
+  );
 
-      $wp_customize->add_setting(
-        'copyright_name',
-        array(
-          'default' => 'Nom',
-          'type' => 'theme_mod'
-        )
-      );
-
-      $wp_customize->add_control(
-        'copyright_name',
-        array(
-          'label' => 'Nom copyright',
-          'description' => 'Nom du copyright',
-          'section' => 'footer',
-          'setting' => 'copyright_name',
-          'type' => 'text'
-        )
-      );
-
-      $wp_customize->add_setting(
-        'copyright_text',
-        array(
-          'default' => 'Tous droits réservés',
-          'type' => 'theme_mod'
-        )
-      );
-
-      $wp_customize->add_control(
-        'copyright_text',
-        array(
-          'label' => 'Texte copyright',
-          'description' => 'Texte du champ copyright',
-          'section' => 'footer',
-          'setting' => 'copyright_text',
-          'type' => 'text'
-        )
-      );
+  $wp_customize->add_control(
+    'copyright_text',
+    array(
+      'label'       => 'Texte copyright',
+      'description' => 'Texte du champ copyright',
+      'section'     => 'footer',
+      'setting'     => 'copyright_text',
+      'type'        => 'text'
+    )
+  );
 
 
 
