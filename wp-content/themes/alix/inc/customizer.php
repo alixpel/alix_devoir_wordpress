@@ -753,11 +753,52 @@ function alix_customize_register($wp_customize) {
   //   )
   // );
 
+  // Section Footer
+      $wp_customize->add_section(
+      'footer',
+        array(
+          'title' => 'footer',
+          'description'   => 'Personnalisation du bas de page'
+        )
+      );
 
+      $wp_customize->add_setting(
+        'copyright_name',
+        array(
+          'default' => 'Nom',
+          'type' => 'theme_mod'
+        )
+      );
 
+      $wp_customize->add_control(
+        'copyright_name',
+        array(
+          'label' => 'Nom copyright',
+          'description' => 'Nom du copyright',
+          'section' => 'footer',
+          'setting' => 'copyright_name',
+          'type' => 'text'
+        )
+      );
 
+      $wp_customize->add_setting(
+        'copyright_text',
+        array(
+          'default' => 'Tous droits réservés',
+          'type' => 'theme_mod'
+        )
+      );
 
-
+      $wp_customize->add_control(
+        'copyright_text',
+        array(
+          'label' => 'Texte copyright',
+          'description' => 'Texte du champ copyright',
+          'section' => 'footer',
+          'setting' => 'copyright_text',
+          'type' => 'text'
+        )
+      );
 
 
 
