@@ -41,27 +41,37 @@ function alix_customize_register($wp_customize) {
     )
   );
 
+  // h1
   $wp_customize->add_section(
-    'fp_texts_title',
+    'fp_h1',
     array(
-      'default' => 'Concert !',
-      'type'    => 'theme_mod'
+      'title' => 'Titre principal',
+      'description' => 'Réglages du titre principal de la page d\'accueil',
+      'panel' => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'fp_h1_text',
+    array(
+      'default' => 'Les dates de l\'été !',
+      'type'  => 'theme_mod'
     )
   );
 
   $wp_customize->add_control(
-    'fp_texts_title',
+    'fp_h1_text',
     array(
       'label'          => 'Titre principal',
       'description'    => 'Texte du titre principal',
-      'section'        => 'fp_texts',
-      'setting'        => 'fp_texts_title',
+      'section'        => 'fp_h1',
+      'setting'        => 'fp_h1_text',
       'type'           => 'text'
     )
   );
 
   $wp_customize->add_setting(
-    'fp_texts_title_size',
+    'fp_h1_size',
     array(
     'default'     => 90,
     'type'        => 'theme_mod'
@@ -69,12 +79,12 @@ function alix_customize_register($wp_customize) {
   );
 
   $wp_customize->add_control(
-    'fp_texts_title_size',
+    'fp_h1_size',
     array(
-      'label'          => 'Taille du titre',
-      'description'    => 'Taille du texte du titre principal',
-      'section'        => 'fp_texts',
-      'setting'        => 'fp_texts_title_size',
+      'label'          => 'Taille du titre principal',
+      'description'    => 'Taille du titre principal',
+      'section'        => 'fp_h1',
+      'setting'        => 'fp_h1_size',
       'type'           => 'number'
     )
   );
