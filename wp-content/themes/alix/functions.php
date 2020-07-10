@@ -96,12 +96,18 @@ function theme_js() {
   wp_enqueue_script( 'main',
   get_template_directory_uri() . '/assets/js/main.js',
   array() );
-  }
+}
 add_action( 'wp_enqueue_scripts', 'theme_js' );
+
 function alix_register_assets() {
   wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', false, '1.1', 'all');
-  }
+}
 add_action('wp_enqueue_scripts', 'alix_register_assets');
 
+//woocommerce
+// function mytheme_add_woocommerce_support() {
+// 	add_theme_support( 'woocommerce' );
+// }
+// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
  ?>

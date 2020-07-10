@@ -5,8 +5,6 @@
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="author" content="<?php bloginfo('author'); ?>">
   <title><?php bloginfo('name'); ?></title>
-
-  <link rel="stylesheet" href="<?php get_template_directory_uri() . '/assets/css/style.css' ?>">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
@@ -51,7 +49,6 @@
     <nav class="navigation navigation-aside">
       <ul>
         <li class="search-toggle">
-          <!-- popup -->
           <a href="#">
             <i class="fas fa-search"></i>
           </a>
@@ -59,7 +56,7 @@
         <li>
           <a href="#">
             <i class="fas fa-shopping-cart"></i>
-            <span class="count cart-counter">0</span>
+            <span class="count cart-counter"></span>
           </a>
         </li>
       </ul>
