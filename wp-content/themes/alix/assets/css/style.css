@@ -229,6 +229,12 @@ fieldset {
 	padding-left: 1rem;
 }
 
+.search-field {
+	border-radius: 0px !important;
+	height: 3.6rem;
+	width: 30vw;
+}
+
 /* fin ajout alix *********************/
 
 legend {

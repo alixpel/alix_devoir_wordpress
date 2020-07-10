@@ -65,13 +65,9 @@
       </ul>
     </nav>
     <section class="search-popup">
-      <form class="search-form" action="index.html" method="post">
         <?php
     		get_search_form();
     		?>
-        <input type="text" name="search" value="" placeholder="Tapez quelque chose ...">
-        <input type="submit" name="submit" value="Rechercher">
-      </form>
     </section>
   </header>
 
