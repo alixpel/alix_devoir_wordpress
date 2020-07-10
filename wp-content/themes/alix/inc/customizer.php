@@ -92,7 +92,7 @@ function alix_customize_register($wp_customize) {
   );
 
   // boutons de la front page
-  
+
   // 1er bouton
   $wp_customize->add_section(
     'fp_button_1',
@@ -106,7 +106,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_setting(
     'fp_button_text_1',
     array(
-      'default' => 'En savoir plus',
+      'default' => 'Bouton 1',
       'type'    => 'theme_mod'
     )
   );
@@ -177,7 +177,7 @@ function alix_customize_register($wp_customize) {
   $wp_customize->add_setting(
     'fp_button_text_2',
     array(
-      'default' => 'En savoir plus',
+      'default' => 'Bouton 2',
       'type'    => 'theme_mod'
     )
   );
@@ -234,6 +234,78 @@ function alix_customize_register($wp_customize) {
       )
     )
   );
+
+  // 3ème bouton
+  $wp_customize->add_section(
+    'fp_button_3',
+    array(
+      'title'       => 'Bouton 3',
+      'description' => 'Bouton dropdown',
+      'panel'       => 'front_page'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'fp_button_text_3',
+    array(
+      'default' => 'Bouton 3',
+      'type'    => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'fp_button_text_3',
+    array(
+      'label'       => 'Button',
+      'description' => 'Texte du bouton',
+      'section'     => 'fp_button_3',
+      'setting'     => 'fp_button_text',
+      'type'        => 'text'
+    )
+  );
+
+  // $wp_customize->add_setting(
+  //   'fp_button_url_2',
+  //   array(
+  //     'default' => '',
+  //     'type'    => 'theme_mod'
+  //   )
+  // );
+  //
+  // $wp_customize->add_control(
+  //   'fp_button_url_2',
+  //   array(
+  //     'label'       => 'Lien',
+  //     'description' => 'Adresse URL du bouton',
+  //     'section'     => 'fp_button_2',
+  //     'setting'     => 'fp_button_url',
+  //     'type'        => 'url'
+  //   )
+  // );
+
+  $wp_customize->add_setting(
+    'fp_button_style_3',
+    array(
+      'default' => 'btn-style-1',
+      'type'    => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'fp_button_style_3',
+    array(
+      'label'       => 'Style',
+      'description' => 'Style du bouton',
+      'section'     => 'fp_button_3',
+      'type'        => 'radio',
+      'choices'     => array(
+        'btn-style-1' => 'Style 1',
+        'btn-style-2' => 'Style 2',
+        'btn-style-3' => 'Style 3'
+      )
+    )
+  );
+  
 
   $wp_customize->add_section(
     'fp_container',

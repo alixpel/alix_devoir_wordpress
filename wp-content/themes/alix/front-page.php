@@ -15,11 +15,17 @@
         <p class="custom-content">
           <?php echo _e(get_theme_mod('fp_text_custom')); ?>
         </p>
-        <a href="<?php echo get_theme_mod('fp_button_url_2'); ?>">
+        <a href="<?php echo get_theme_mod('fp_button_url_2'); ?>"><!-- faire dropdown -->
           <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style_2'); ?>">
             <?php echo _e(get_theme_mod('fp_button_text_2')); ?>
           </button>
         </a>
+        <!-- essai dropdown -->
+        <form action="<?php get_page_uri('url'); ?>" method="get">
+            <?php wp_dropdown_pages(); ?>
+            <button type="submit" class="call-to-action <?php echo get_theme_mod('fp_button_style_3'); ?>"><?php echo _e(get_theme_mod('fp_button_text_3')); ?></button>
+        </form>
+        <!-- fin essai -->
       </div>
     </section>
     <section class="custom-blocks">
