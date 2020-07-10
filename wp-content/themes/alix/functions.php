@@ -12,14 +12,12 @@ function alix_setup() {
   );
   add_theme_support('custom-logo');
   add_theme_support('post_thumbnails');
-
 }
 
 add_action('after_setup_theme', 'alix_setup');
 
-
 function alix_init_widgets() {
-  // TODO COURS - Enregistrer une zone de widget N°1
+
   register_sidebar(
     array(
       'id'  => 'widgets-section-1',
@@ -32,7 +30,6 @@ function alix_init_widgets() {
     )
   );
 
-  // TODO En autonomie - Enregister les zones de widgets N°2 et N°3
   register_sidebar(
     array(
       'id'  => 'widgets-section-2',
@@ -56,8 +53,6 @@ function alix_init_widgets() {
       'after_title' => '</h4>'
     )
   );
-
-  // TODO A la maison - Enregister les zones de widgets N°4 et barre latérale
 
   register_sidebar(
     array(
@@ -103,11 +98,5 @@ function alix_register_assets() {
   wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', false, '1.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'alix_register_assets');
-
-//woocommerce
-// function mytheme_add_woocommerce_support() {
-// 	add_theme_support( 'woocommerce' );
-// }
-// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
  ?>
