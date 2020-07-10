@@ -19,3 +19,11 @@ window.onload = () => {
 
   searchToggle.addEventListener("click", searchHandler);
 }
+
+
+// essai searchPopup
+
+// document.getElementByid('search-button').addEventListener('click', function(){
+//     document.querySelector('.search-popup').style.display = "block";
+//     // alert('coucou');
+// });

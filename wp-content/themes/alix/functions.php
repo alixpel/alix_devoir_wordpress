@@ -91,5 +91,14 @@ require get_template_directory() . '/inc/customizer.php';
 // traduction
 load_theme_textdomain( 'alix', '/languages' );
 
+// path js & css
+function alix_register_assets()
+{
+wp_enqueue_script('javascript', get_template_directory_uri() .'/assets/js/main.js', [], false, true);
+wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', false, '1.1', 'all');
+}
+add_action('wp_enqueue_scripts', 'alix_register_assets');
+
+
 
  ?>

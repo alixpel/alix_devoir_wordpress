@@ -264,25 +264,6 @@ function alix_customize_register($wp_customize) {
     )
   );
 
-  // $wp_customize->add_setting(
-  //   'fp_button_url_2',
-  //   array(
-  //     'default' => '',
-  //     'type'    => 'theme_mod'
-  //   )
-  // );
-  //
-  // $wp_customize->add_control(
-  //   'fp_button_url_2',
-  //   array(
-  //     'label'       => 'Lien',
-  //     'description' => 'Adresse URL du bouton',
-  //     'section'     => 'fp_button_2',
-  //     'setting'     => 'fp_button_url',
-  //     'type'        => 'url'
-  //   )
-  // );
-
   $wp_customize->add_setting(
     'fp_button_style_3',
     array(
@@ -305,7 +286,7 @@ function alix_customize_register($wp_customize) {
       )
     )
   );
-  
+
 
   $wp_customize->add_section(
     'fp_container',

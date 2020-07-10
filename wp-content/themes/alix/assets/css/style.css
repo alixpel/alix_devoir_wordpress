@@ -219,7 +219,7 @@ fieldset {
 	padding: 0.35em 0.625em 0.75em;
 }
 
-/* ajout alix */
+/* ajout alix *************************/
 
 #page_id {
 	border: 3px solid black;
@@ -229,7 +229,7 @@ fieldset {
 	padding-left: 1rem;
 }
 
-/* fin ajout alix */
+/* fin ajout alix *********************/
 
 legend {
 	-webkit-box-sizing: border-box;
@@ -973,7 +973,9 @@ body {
 
 .custom-blocks {
 	display: flex;
+	justify-content: space-evenly;
 }
+/* ! justify-content: space-evenly; = ajouté par alix pelletier */
 
 .custom-presentation {
 	display: flex;

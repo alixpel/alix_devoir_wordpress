@@ -5,11 +5,11 @@
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="author" content="<?php bloginfo('author'); ?>">
   <title><?php bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+
+  <link rel="stylesheet" href="<?php get_template_directory_uri() . '/assets/css/style.css' ?>">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4e5f136f21.js" crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js" type="text/javascript"></script>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -51,7 +51,9 @@
     <nav class="navigation navigation-aside">
       <ul>
         <li class="search-toggle">
-          <a href="#"><i class="fas fa-search"></i>
+          <!-- popup -->
+          <a href="#">
+            <i class="fas fa-search"></i>
           </a>
         </li>
         <li>
@@ -64,8 +66,35 @@
     </nav>
     <section class="search-popup">
       <form class="search-form" action="index.html" method="post">
+        <?php
+    		get_search_form();
+    		?>
         <input type="text" name="search" value="" placeholder="Tapez quelque chose ...">
         <input type="submit" name="submit" value="Rechercher">
       </form>
     </section>
   </header>
+
+  <script>
+  window.onload = () => {
+    var siteHeader = document.querySelector(".site-header");
+    var siteContent = document.querySelector(".site-header");
+    var siteFooter = document.querySelector(".site-header");
+    var searchToggle = document.querySelector(".search-toggle");
+    var searchPopup = document.querySelector(".search-popup");
+    let isVisible = false;
+
+    searchPopup.style.top = `${siteHeader.clientHeight}px`;
+
+    function searchHandler() {
+      isVisible = !isVisible;
+      if(isVisible) {
+        searchPopup.classList.add("visible");
+      } else {
+        searchPopup.classList.remove("visible");
+      }
+    }
+
+    searchToggle.addEventListener("click", searchHandler);
+  }
+  </script>
