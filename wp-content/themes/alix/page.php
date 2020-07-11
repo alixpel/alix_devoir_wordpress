@@ -12,18 +12,6 @@
       <article class="entry page">
         <section class="entry-content">
           <?php the_content(); ?>
-          <!-- <section class="comments">
-            <h3 class="comments-title">Laisser un message</h3>
-            <form class="comment-form" action="index.html" method="post">
-              <label for="name">Nom</label>
-              <input type="text" name="name" required>
-              <label for="email">E-mail</label>
-              <input type="email" name="email" required>
-              <label for="comment">Commentaire</label>
-              <input type="textarea" rows="10" cols="80" name="comment" required>
-              <input type="submit" name="submit" value="Envoyer">
-            </form>
-          </section> -->
           <?php comments_template(); ?>
       </section>
       </article>

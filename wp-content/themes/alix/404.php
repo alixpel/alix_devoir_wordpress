@@ -12,7 +12,7 @@
       <h2 class="entry-title"><?php _e( 'Erreur 404', 'alix' ); ?>&nbsp<i class="fas fa-search"></i></h2>
   		<div class="intro-text"><h3 class="error-page"><?php _e( 'La page que vous cherchez n\'existe pas 😬 ...', 'alix' ); ?></h3></div>
       <a href="<?php echo get_bloginfo('url') . '/' ; ?>">
-        <button type="button" class="call-to-action"><i class="far fa-smile-wink"></i>&nbsp Retourner à l'accueil du site ? &nbsp<i class="fas fa-home"></i></button>
+        <button type="button" class="call-to-action"><i class="far fa-smile-wink"></i>&nbsp <?php _e('Retourner à l\'accueil du site ?', 'alix') ?> &nbsp<i class="fas fa-home"></i></button>
       </a>
     </section>
   </main>

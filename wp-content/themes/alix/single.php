@@ -24,8 +24,8 @@
               echo trim($output, $separator);
               ?>
               <h4 class="comments-number">
-                <i class="fas fa-comment"></i><?php _e(comments_number('Aucun commentaire', '1 commentaire',
-             '% commentaires')); ?>
+                <i class="fas fa-comment"></i><?php comments_number('Aucun commentaire', '1 commentaire',
+             '% commentaires'); ?>
               </h4>
             </section>
             <h2 class="entry-title">
@@ -34,16 +34,16 @@
           </section>
           <?php
           if(has_post_thumbnail()) :
-            $thumbnail_id = _e(get_post_thumbnail_id());
-            $thumbnail_alt = _e(get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true));
-            $thumbnail_title = _e(get_the_title($thumbnail_id));
+            $thumbnail_id = get_post_thumbnail_id();
+            $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+            $thumbnail_title = get_the_title($thumbnail_id);
             the_post_thumbnail('full', ['class' => 'featured-image', 'title' => $thumbnail_title,
             'alt' => $thumbnail_alt]);
            endif;
            ?>
         </header>
         <section class="entry-content">
-          <?php _e(the_content()); ?>
+          <?php the_content(); ?>
         </section>
         <footer class="entry-footer">
           <section class="author-card">
@@ -54,22 +54,22 @@
             <section class="author-metadata">
               <h3 class="author-meta-name"><?php the_author(); ?></h3>
               <p class="author-meta-description">
-                <?php _e(the_author_meta('description')); ?>
+                <?php the_author_meta('description'); ?>
               </p>
             </section>
           </section>
           <nav class="navigation pagination entry-pagination">
             <?php
-          _e(the_post_navigation(
+          the_post_navigation(
             array(
               'prev_text'          => '<i class="fas fa-arrow-left"></i> %title',
               'next_text'          => '%title <i class="fas fa-arrow-right"></i>'
             )
-          ));
+          );
           ?>
           </nav>
           <section class="comments">
-            <?php _e(comments_template()); ?>
+            <?php comments_template(); ?>
           </section>
         </footer>
       </article>

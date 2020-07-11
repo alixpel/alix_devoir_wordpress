@@ -37,7 +37,7 @@
         </section>
         <footer class="entry-footer">
           <div class="read-more">
-            <a href="<?php the_permalink(); ?>">Lire la suite</a>
+            <a href="<?php the_permalink(); ?>"><?php _e('Lire la suite', 'alix'); ?></a>
           </div>
         </footer>
       </article>
@@ -54,10 +54,6 @@
         ?>
       </nav>
     </section>
-      <!-- <div class="widget">
-        <h3 class="widget-title">Zone de widgets</h3>
-        <p>Ajout dynamique des titres et contenus des widgets.</p>
-      </div> -->
     <?php get_sidebar(); ?>
   </main>
 <?php get_footer(); ?>
