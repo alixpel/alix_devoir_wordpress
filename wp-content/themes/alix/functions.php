@@ -87,6 +87,8 @@ require get_template_directory() . '/inc/customizer.php';
 load_theme_textdomain( 'alix', '/languages' );
 
 // path js & css
+
+
 function theme_js() {
   wp_enqueue_script( 'main',
   get_template_directory_uri() . '/assets/js/main.js',
@@ -94,16 +96,19 @@ function theme_js() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
-function alix_register_assets() {
-  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css');
+function find_css() {
+  wp_enqueue_style('style', get_stylesheet_uri());
 }
-add_action('init', 'alix_register_assets');
+add_action('wp_enqueue_scripts', 'find_css');
 
-// function find_css() {
-//   wp_enqueue_style('style', get_stylesheet_uri());
+
+// function alix_register_assets() {
+//   wp_enqueue_style('style',
+//   get_template_directory_uri() . '/assets/css/style.css');
 // }
-// add_action('wp_enqueue_styles', 'find_css');
+// add_action('init', 'alix_register_assets');
 
+// =========================================================
 function test(){
 echo '<p class="hello"> page test : Hello World !!</p>';
 }
