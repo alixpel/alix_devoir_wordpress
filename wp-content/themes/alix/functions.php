@@ -96,13 +96,17 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 function alix_register_assets() {
   wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css');
-  var_dump('test');
 }
-add_action('wp_enqueue_scripts', 'alix_register_assets');
+add_action('init', 'alix_register_assets');
 
 // function find_css() {
 //   wp_enqueue_style('style', get_stylesheet_uri());
 // }
 // add_action('wp_enqueue_styles', 'find_css');
+
+function test(){
+echo '<p class="hello"> page test : Hello World !!</p>';
+}
+add_action( 'test', 'test');
 
  ?>
