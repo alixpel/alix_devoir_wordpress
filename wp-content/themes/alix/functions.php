@@ -88,7 +88,6 @@ load_theme_textdomain( 'alix', '/languages' );
 
 // path js & css
 
-
 function theme_js() {
   wp_enqueue_script( 'main',
   get_template_directory_uri() . '/assets/js/main.js',
